@@ -1,0 +1,34 @@
+<%= form_with(model: memory, local: true) do |form| %>
+  <% if memory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(memory.errors.count, "error") %> prohibited this memory from being saved:</h2>
+
+      <ul>
+      <% memory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :memory_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text, id: :memory_text, :onfocusout => 'alert("Before submitting please be sure this is something that is ok to be seen by others and will not upset any viewers.")' %>
+  </div>
+  <script type="text/javascript">
+    function myWarning()
+    {
+      alert("Focusout")
+      return
+    }
+  </script>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+// Place all the styles related to the myJava controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	width: 700px;
+	margin: auto;
+}
+
+textarea:read-only {
+	width: 400px; 
+	height: 60px; 
+	background-color: lightgray;
+}

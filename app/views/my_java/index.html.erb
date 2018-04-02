@@ -1,0 +1,92 @@
+<head>
+	<script type="text/javascript">
+		function sayHello() {
+			alert("Hello world");
+		}
+	</script>
+</head>
+<title>Javascript Reference Sheet</title>
+<div class="Contents">
+	<h1 style="text-align: center;">My Javascript - What I have learned</h1>
+	<p>Here, I am going to create a Javascript how to, with detailed instructions on each in hopes this will help myself remember it. I have had a log of troble learning javascript, so I am hoping this will be a good way for me to remember what I learn and even refer back to it when needed.</p>
+	<p>If you find your way to this out of luck while looking for help with Javascript, I hope this helps you. Keep in mind though, I am making this as a personal reference and itr is set up in a way to help myself. If you do use this, I recommend doing something similar. As I am just documenting what I am learning to help myself remember as much as possible. It's wise to do the same. Happy Programming!</p>
+	<%= render 'index' %>
+</div>
+<hr>
+<div id="1">
+
+	<h1>Rules of Javascript</h1>
+	<h3>1. Semicolons</h3>
+	<p>In my opinion, it is best practice to use semicolons at the end of each statement. Javascript on the other hand, does make them optional. You can omit the semicolons if each statement is on a new line.</p>
+	<textarea style="width: 400px; height: 80px; background-color: lightgray;" readonly="true">
+	<script type="text/javascript">
+		var1 = 10
+		var2 = 20
+	</script>
+	</textarea>
+	<p>If you want to do the strings in single line mode, you will need to use a semicolon.</p>
+	<textarea style="width: 400px; height: 80px; background-color: lightgray;" readonly="true">
+	<script type="text/javascript">
+		var1 = 10; var2 = 20;
+	</script>
+	</textarea>
+	<h3>2.Whites spaces</h3>
+	<p>Javascript ignores white space, spaces and Line breaks. You can use new lines and tabs as much as needed to make the code understandable and easy to follow.</p>
+	<h3>3. Case Sensitive</h3>
+	<p>Javascript is a case-sensitive language. Meaning - your variables, functions, methods and arrays, are also case-sensitive.</p>
+	<p><b>Note</b> - Use care while writing variable and function names in Javascript</p>
+	<h3>4. Comments</h3>
+	<p>As with all languages, there is a way to have comments in the code, which is recommended in all codes to make it easier to understand what is going on in the code.</p>
+	<p><b>Single line</b>- Started with //. This will make all text from the // to the end of the line, commented out and not read by javascript.</p>
+	<p><b>Multiline Comment</b>- is set with /* and */ - so when using multiline comments, /* Comments */</p>
+</div>
+<hr>
+<div id="2">
+	<h1>Hello World</h1>
+	<p>One of the first things you learn in all tutorials is how to write something into the document. Most of the time, you see the <i>Hello World</i> program. To write something into the document, you will use document.write("").</p>
+	<textarea style="width: 400px; height: 60px; background-color: lightgray;" readonly="true">
+	<script type="text/javascript">
+		document.write("Hello world!");
+	</script>
+	</textarea>
+	<br />
+
+	<h3>Produces:</h3>
+	Hello world!
+</div>
+
+<hr>
+<div id="3">
+	<h1>Non Javascript Broswers</h1>
+	<p>Some browsers may not support javascript, and others may and maybe the user does not have javascript allowed. In this case, it would make it tougher on us if we are using something important that <b>needs</b> Javascript to work. So, we can also set a noscript up right after a script.</p>
+
+	<textarea style="width: 600px; height: 120px; background-color: lightgray;" readonly="true">
+	<script type="text/javascript">
+		document.write("Hello World!");
+	</script>
+
+	<noscript>Sorry Must have javascript enabled to go on.</noscript>
+	</textarea>
+</div>
+<hr>
+<div id="4">
+	<h1>Code Placement</h1>
+	<h3>Javascript in head tags section</h3>
+	<p>If you want to have a script run on some event, like if theres an onClick event. The codes inside the head tag will not load until they are called.</p>
+	<textarea style="width: 700px; height: 200px; background-color: lightgray;" readonly="true">
+	<html>
+		<head>
+			<script type="text/javascript">
+				function sayHello() {
+					alert("Hello world");
+				}
+			</script>
+		</head>
+		<body>
+			<input type="button" onclick="sayHello()" value="Say Hello" />
+		</body>
+	</html>
+	</textarea>
+	<p>Here is what that code does:</p>
+	<input type="button" onclick="sayHello()" value="Say Hello" />
+</div>
