@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'java', to: "my_java#index"
+  get 'javascript', to: "my_java#index"
 
   resources :memories
 

@@ -9,7 +9,10 @@
 <div class="Contents">
 	<h1 style="text-align: center;">My Javascript - What I have learned</h1>
 	<p>Here, I am going to create a Javascript how to, with detailed instructions on each in hopes this will help myself remember it. I have had a log of troble learning javascript, so I am hoping this will be a good way for me to remember what I learn and even refer back to it when needed.</p>
-	<p>If you find your way to this out of luck while looking for help with Javascript, I hope this helps you. Keep in mind though, I am making this as a personal reference and itr is set up in a way to help myself. If you do use this, I recommend doing something similar. As I am just documenting what I am learning to help myself remember as much as possible. It's wise to do the same. Happy Programming!</p>
+	<p>If you find your way to this out of luck while looking for help with Javascript, I hope this helps you. Keep in mind though, I am making this as a personal reference and itr is set up in a way to help myself. If you do use this, I recommend doing something similar. As I am just documenting what I am learning to help myself remember as much as possible. It's wise to do the same.Below I will list my references I learned this information from in a list so I am not technically plagiarizing this whole site. Happy Programming!</p>
+	<ul>
+		<li><a href="https://www.tutorialspoint.com/javascript/index.htm"> https://www.tutorialspoint.com/javascript/index.htm</a></li>
+	</ul>
 	<%= render 'contents' %>
 </div>
 <hr>
@@ -53,7 +56,10 @@
 	<br />
 
 	<h3>Produces:</h3>
-	Hello world!
+	<div class="showcode">
+		Hello world!
+	</div>
+	
 
 	<p><a href="#contents">Back to top</a></p>
 </div>
@@ -92,7 +98,10 @@
 	</html>
 	</textarea>
 	<p>Here is what that code does:</p>
-	<input type="button" onclick="sayHello()" value="Say Hello" />
+	<div class="showcode">
+		<input type="button" onclick="sayHello()" value="Say Hello" />
+	</div>
+	
 	<br />
 	<h3>Javascript within the body tags</h3>
 	<p>You will use the JavaScript inside the body when you want the javascript to run onPageLoad. You can also use both at once if you like.</p>
@@ -115,9 +124,12 @@
 	</html>
 	</textarea>
 	<p>This will produce this:</p>
-	Hello World!
-	<br />
-	<input type="button" onclick="sayHello()" value="Say Hello" />
+	<div class="showcode">
+		Hello World!
+		<br />
+		<input type="button" onclick="sayHello()" value="Say Hello" />		
+	</div>
+
 	<p><a href="#contents">Back to top</a></p>
 	<h3>Javascripts in external files</h3>
 	<p>In the case where you are using the same code several times on different pages, it may be best to only write the code once. You can do this in the head tags like this:</p>
@@ -131,7 +143,10 @@
 	<h3>Ruby on Rails Javascript - app/assets/javascripts/application.js</h3>
 
 	<p>No need to show the file here for myself, all I did was went to this file and created a function inside of it, then made a button that called it on this page. There is no need for using script src for this because rails builds that all in for you.</p>
-	<button onclick="testExt()">Rails Rocks</button>
+	<div class="showcode">
+		<button onclick="testExt()">Rails Rocks</button>
+	</div>
+	
 	<p><a href="#contents">Back to top</a></p>
 </div>
 <hr>
@@ -158,4 +173,100 @@
 		money = 2000.50;
 	</script>
 	</textarea>
+	<p><b>Note -</b> Only declare a <b>var</b> once in each document. Should never redeclare with var.</p>
+	<p>Javascript is an <b>untyped</b> language, meaning you do not declare what type of variable you are declaring. So you do not have to declare it to be an int or a string.</p>
+	<h3>Javascript Variable Scope</h3>
+	<p>The scope of the variable is the region in which it is defined. Variables have two scopes.</p>
+	<ul>
+		<li><b>Regional Variable -</b>A global variable has a global scope, which means it can be deifined anywhere in your JavaSript code.</li>
+		<li><b>Local Scope -</b>A local variable will be visible only within a function where it is defined. Function parameters are always local to that method.</li>
+	</ul>
+	<p>Within the body of a function, a local variable takes precedence over a global fraiable with the same name.</p>
+	<textarea style="width: 700px; height: 200px; background-color: lightgray;" readonly="true">
+	<html>
+		<script type="text/javascript">
+			var myVar = "Global"
+
+			function printName() {
+				var myVar = "Local";
+				document.write(name);
+			}
+		</script>
+	</html>
+	</textarea>
+	<p>Though just the var will produce "Global", this method will produce:</p>
+	<div class="showcode">
+		<p>Local</p>
+	</div>
+	<h3>Name Variables</h3>
+	<p>I am not going to spend much time on this section as naming variables is fairly easy, there are only a few need to knows about it.</p>
+	<ul>
+		<li>Do not use <a href="http://www.javascripter.net/faq/reserved.htm"  target="_blank">reserved words</a></li>
+		<li>Variables should not start with a number. They must begin with a letter or an underscore character.</li>
+	</ul>
+	<p><a href="#contents">Back to top</a></p>
+</div>
+<div id="6">
+	<h1>Javascript - Operators</h1>
+	<h3>What is an operator?</h3>
+	<p>If you look at a simple expression, <b>4 + 5 = 9</b>, the 4 and 5 are <b>operands</b>, and the '+' is the <b>operator</b>. JavaScript supports these types of operators:</p>
+	<ul>
+		<li>Arithmetic Operators</li>
+		<li>Comparison Operators</li>
+		<li>Logical (or Relational) Operators</li>
+		<li>Assignment Operators</li>
+		<li>Conditional (or ternary) Operators</li>
+	</ul>
+	<h3>Arithmetic Operators</h3>
+	<ul>
+		<li>+ (Addition) - Adds two Operands</li>
+		<li>- (Subtraction) - Subtracts the second operand from the first</li>
+		<li>* (Multiplication) - Multiply both operands</li>
+		<li>/ (Division) - Divise the numberator by the denominator</li>
+		<li>% (Modulus) - Outputs the remainer of an integer division</li>
+		<li>++ (Increment) - Increases an integer value by one</li>
+		<li>-- (Decrement) - Decrease an integer value by one</li>
+	</ul>
+	<p><b>Note -</b> Addition works with both numbers and strings. "A" + 100 = "A100"</p>
+	<h3>Logical Operators</h3>
+	<ul>
+		<li>&& (Logical AND) - If both the operands are non-zero, then condition is true</li>
+		<li>|| (Logical OR) - If any of the two operands are non-zero, the condition becomes true</li>
+		<li>! (Logical NOT) - Reverses the logical state of its operand. If if a condition is true, then the Logical NOT will make it false. </li>
+	</ul>
+	<p><a href="https://www.tutorialspoint.com/javascript/javascript_operators.htm">This link</a> goes into more detail about the operators than I feel is necessary right now. Honestly, if you are not new to programming all together, then it is fairly basic and normal information.</p>
+	<p><a href="#contents">Back to top</a></p>
+</div>
+<div id="7">
+	<h1>Javascript - If..else Statement</h1>
+	<p>Using If..Else statements is how you allow your program to make decisions.</p>
+	<p>Javascript supports the following forms of if...else statements:</p>
+	<ul>
+		<li>If statement</li>
+		<li>If..else statement</li>
+		<li>If..else if.. statement</li>
+	</ul>
+	<h3>If Statement</h3>
+	<p>The <b>if</b> statements is the fundamental control statement that allows Javascript to make decisions and execute statements conditionally.</p>
+	<p>The syntax for a basic if statement:</p>
+	<div class="showcode">
+		if (expression){<br />
+		Statement(s) to be executed if expression is true<br />
+	}<br />
+	</div><br />
+	<textarea style="width: 700px; height: 200px; background-color: lightgray;" readonly="true">
+	<html>
+		<script type="text/javascript">
+			var age = 20;
+
+			if(age >= 18) {
+				document.write("Customer is old enough to buy cigarettes.")
+			}
+		</script>
+	</html>
+	</textarea>
+	<p>This produces:</p>
+	<div class="showcode">
+		<p>Customer is old enough to buy cigarettes.</p>
+	</div>
 </div>
