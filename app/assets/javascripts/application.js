@@ -13,3 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+function testExt() {
+	alert("This is located inside the app/assets/javascripts/application.js file in Ruby on Rails.");
+}

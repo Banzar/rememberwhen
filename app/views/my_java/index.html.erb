@@ -10,7 +10,7 @@
 	<h1 style="text-align: center;">My Javascript - What I have learned</h1>
 	<p>Here, I am going to create a Javascript how to, with detailed instructions on each in hopes this will help myself remember it. I have had a log of troble learning javascript, so I am hoping this will be a good way for me to remember what I learn and even refer back to it when needed.</p>
 	<p>If you find your way to this out of luck while looking for help with Javascript, I hope this helps you. Keep in mind though, I am making this as a personal reference and itr is set up in a way to help myself. If you do use this, I recommend doing something similar. As I am just documenting what I am learning to help myself remember as much as possible. It's wise to do the same. Happy Programming!</p>
-	<%= render 'index' %>
+	<%= render 'contents' %>
 </div>
 <hr>
 <div id="1">
@@ -39,6 +39,7 @@
 	<p>As with all languages, there is a way to have comments in the code, which is recommended in all codes to make it easier to understand what is going on in the code.</p>
 	<p><b>Single line</b>- Started with //. This will make all text from the // to the end of the line, commented out and not read by javascript.</p>
 	<p><b>Multiline Comment</b>- is set with /* and */ - so when using multiline comments, /* Comments */</p>
+	<p><a href="#contents">Back to top</a></p>
 </div>
 <hr>
 <div id="2">
@@ -53,6 +54,8 @@
 
 	<h3>Produces:</h3>
 	Hello world!
+
+	<p><a href="#contents">Back to top</a></p>
 </div>
 
 <hr>
@@ -67,6 +70,7 @@
 
 	<noscript>Sorry Must have javascript enabled to go on.</noscript>
 	</textarea>
+	<p><a href="#contents">Back to top</a></p>
 </div>
 <hr>
 <div id="4">
@@ -89,4 +93,69 @@
 	</textarea>
 	<p>Here is what that code does:</p>
 	<input type="button" onclick="sayHello()" value="Say Hello" />
+	<br />
+	<h3>Javascript within the body tags</h3>
+	<p>You will use the JavaScript inside the body when you want the javascript to run onPageLoad. You can also use both at once if you like.</p>
+	<textarea style="width: 700px; height: 260px; background-color: lightgray;" readonly="true">
+	<html>
+		<head>
+			<script type="text/javascript">
+				function sayHello() {
+					alert("Hello world");
+				}
+			</script>
+		</head>
+		<body>
+			<script type="text/javascript">
+				document.write("Hello World!");
+			</script>
+			<br />
+			<input type="button" onclick="sayHello()" value="Say Hello" />
+		</body>
+	</html>
+	</textarea>
+	<p>This will produce this:</p>
+	Hello World!
+	<br />
+	<input type="button" onclick="sayHello()" value="Say Hello" />
+	<p><a href="#contents">Back to top</a></p>
+	<h3>Javascripts in external files</h3>
+	<p>In the case where you are using the same code several times on different pages, it may be best to only write the code once. You can do this in the head tags like this:</p>
+	<textarea style="width: 700px; height: 100px; background-color: lightgray;" readonly="true">
+	<html>
+		<head>
+			<script type="text/javascript" src="myJava.js"></script>
+		</head>
+	</html>
+	</textarea>
+	<h3>Ruby on Rails Javascript - app/assets/javascripts/application.js</h3>
+
+	<p>No need to show the file here for myself, all I did was went to this file and created a function inside of it, then made a button that called it on this page. There is no need for using script src for this because rails builds that all in for you.</p>
+	<button onclick="testExt()">Rails Rocks</button>
+	<p><a href="#contents">Back to top</a></p>
+</div>
+<hr>
+<div id="5">
+	<h1>Javascripts Datatypes</h1>
+	<p>Data types are the types of values that can be represented and maniupulated in a programming language.</p>
+	<p>Javascript has three primitive data types:</p>
+	<ul>
+		<li><b>Numbers</b> - 123, 3.14...</li>
+		<li><b>Strings of text</b>- "I'm great" is a string</li>
+		<li><b>Boolean</b> - True/False</li>
+	</ul>
+	<p>Javascript also defines two trivial data types, <b>null</b> and <b>undefined</b></p>
+	<p><b>Note -</b> Javascript does not make a distinction between integer numbers and floating-point values like most other languages do.</p>
+	<h3>Javascript Variables</h3>
+	<p>Like most programming languages, Javascript has variables. Variables can be thought of as named containers. You can put your data into its container, and just use its name to refer to it later.</p>
+	<p>Before a variable can be used, it must be declared as a variabe with <b>var</b> as shown below.</p>
+	<textarea style="width: 700px; height: 120px; background-color: lightgray;" readonly="true">
+	<script type="text/javascript">
+		// Variables can be defined when declared, or later
+		var name = "David";
+		var money;
+
+		money = 2000.50;
+	</script>
+	</textarea>
 </div>
