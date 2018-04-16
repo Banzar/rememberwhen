@@ -1,0 +1,16 @@
+<head>
+	<script type="text/javascript">
+		function editNodeText(id, newText) {
+			var node = document.getElementById(id);
+
+			while (node.firstChild)
+				node.removeChild(node.firstChild);
+
+			node.appendChild(document.createTextNode(newText));
+			node.style.color = "red";
+		}
+	</script>
+</head>
+<body>
+	<p id="testID" onclick="editNodeText('testID', 'New Text here.')">Test text</p>
+</body>

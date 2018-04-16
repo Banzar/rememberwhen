@@ -1,9 +1,5 @@
 <head>
-	<script type="text/javascript">
-		function sayHello() {
-			alert("Hello world");
-		}
-	</script>
+
 </head>
 <title>Javascript Reference Sheet</title>
 <div class="Contents">
@@ -21,18 +17,23 @@
 	<h1>Rules of Javascript</h1>
 	<h3>1. Semicolons</h3>
 	<p>In my opinion, it is best practice to use semicolons at the end of each statement. Javascript on the other hand, does make them optional. You can omit the semicolons if each statement is on a new line.</p>
-	<textarea style="width: 400px; height: 80px; background-color: lightgray;" readonly="true">
-	<script type="text/javascript">
-		var1 = 10
-		var2 = 20
-	</script>
-	</textarea>
+<pre>
+<xmp>
+<script type="text/javascript">
+	var1 = 10
+	var2 = 20
+</script>
+</xmp>		
+</pre>
+
 	<p>If you want to do the strings in single line mode, you will need to use a semicolon.</p>
-	<textarea style="width: 400px; height: 80px; background-color: lightgray;" readonly="true">
+	<pre>
+	<xmp>
 	<script type="text/javascript">
 		var1 = 10; var2 = 20;
-	</script>
-	</textarea>
+	</script>	
+	</xmp>	
+	</pre>
 	<h3>2.Whites spaces</h3>
 	<p>Javascript ignores white space, spaces and Line breaks. You can use new lines and tabs as much as needed to make the code understandable and easy to follow.</p>
 	<h3>3. Case Sensitive</h3>
@@ -189,7 +190,7 @@
 
 			function printName() {
 				var myVar = "Local";
-				document.write(name);
+				document.write(myVar);
 			}
 		</script>
 	</html>
@@ -237,6 +238,7 @@
 	<p><a href="https://www.tutorialspoint.com/javascript/javascript_operators.htm">This link</a> goes into more detail about the operators than I feel is necessary right now. Honestly, if you are not new to programming all together, then it is fairly basic and normal information.</p>
 	<p><a href="#contents">Back to top</a></p>
 </div>
+<hr>
 <div id="7">
 	<h1>Javascript - If..else Statement</h1>
 	<p>Using If..Else statements is how you allow your program to make decisions.</p>
@@ -254,13 +256,20 @@
 		Statement(s) to be executed if expression is true<br />
 	}<br />
 	</div><br />
-	<textarea style="width: 700px; height: 200px; background-color: lightgray;" readonly="true">
+	<p>I am going to skip doing this three times and will go over each of these in one code, makes it simple, and its almost self explanatory, this way I get to practice them all, and show them all in one textarea.</p>
+	<textarea style="width: 700px; height: 300px; background-color: lightgray;" readonly="true">
 	<html>
 		<script type="text/javascript">
 			var age = 20;
 
-			if(age >= 18) {
-				document.write("Customer is old enough to buy cigarettes.")
+			if(age > 18) {
+				document.write("Customer is old enough to buy cigarettes.");
+			}
+			else if(age < 18) {
+				document.write("Customer is to young to purchase cigarettes.");
+			else {
+				document.write("Customer is barely old enough to buy cigarettes.");
+			}
 			}
 		</script>
 	</html>
@@ -270,3 +279,11 @@
 		<p>Customer is old enough to buy cigarettes.</p>
 	</div>
 </div>
+<textarea style="width: 700px; height: 300px; background-color: lightgray;" readonly="true">
+<%= render 'test' %>
+</textarea>
+<p>Results with:</p>
+<div class="showcode">
+	<%= render 'test' %>
+</div>
+	
